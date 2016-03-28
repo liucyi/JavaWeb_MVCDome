@@ -20,6 +20,6 @@ public interface CustomerDAO {
 	 * @param name
 	 * @return
 	 */
-	public long getCountWithName( String name);
-	 
+	public long getCountWithName(String name);
+
 }
