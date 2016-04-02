@@ -1,5 +1,7 @@
 package com.liucyi.mvcapp.test;
 
+import java.util.List;
+
 import com.liucyi.mvcapp.dao.*;
 import com.liucyi.mvcapp.domain.Customer;
 import com.liucyi.mvcapp.impl.CustomeDAOJdbcImpl;
@@ -11,6 +13,8 @@ import org.junit.Test;
 public class CustomerDAOJdbcImplTest {
 	private CustomerDAO customerDao = new CustomeDAOJdbcImpl();
 
+	 
+	
 	@Test
 	public void testReleaseConnection() {
 		fail("Not yet implemented");
@@ -91,11 +95,25 @@ public class CustomerDAOJdbcImplTest {
 	@Test
 	public void testSave() {
 		Customer customer = new Customer();
-		customer.setId(1);
+		 
 		customer.setAddress("3232");
-		customer.setName("liucyi");
-		customer.setPhone("110");
+		customer.setName("liu22cyi");
+		customer.setPhone("122210");
 		customerDao.save(customer);
 	}
+	@Test
+	public void testDelete() {
+	 
+	 
+		customerDao.delete(2); 
+	}
+	@Test
+	public void testGetAll() {
+	 
+	  List<Customer> customers =  customerDao.getList();
+	  System.out.println(customers);
+		 
+	}
+
 
 }

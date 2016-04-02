@@ -17,7 +17,7 @@ public class CustomeDAOJdbcImpl extends DAO<Customer> implements CustomerDAO {
 
 	@Override
 	public void save(Customer customer) {
-		String sql = "insert into customers  (name, address, phone)   values(?,?,?);";
+		String sql = "insert into customers  (name, address, phone)   values (?,?,?)";
 		update(sql);
 	}
 
